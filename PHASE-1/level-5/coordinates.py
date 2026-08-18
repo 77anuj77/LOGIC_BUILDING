@@ -21,9 +21,10 @@ def check(coordinate : coordinate) -> None:
 
 
 while True:
-    a= float(input("Enter the a: "))
-    b= float(input("Enter the b: "))
-
-    check((a,b))
-
+    try:
+        a= float(input("Enter the a: "))
+        b= float(input("Enter the b: "))
+        check((a,b))
+    except ValueError as e:
+        print("error :", e)
 
